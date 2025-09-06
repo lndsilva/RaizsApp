@@ -13,7 +13,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/idTooBar"
+            android:id="@+id/idMaterialToolBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/outline_arrow_back"
@@ -78,6 +78,13 @@
 
 
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_below="@+id/idTabLayout"
+        android:layout_above="@+id/idBottonNavView"
+        android:id="@+id/idViewPagerItens"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/idBottonNavView"
