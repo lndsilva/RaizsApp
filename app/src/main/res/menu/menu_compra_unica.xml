@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mHome"
+        android:icon="@drawable/outline_home"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mPedidos"
+        android:icon="@drawable/outline_point_of_sale"
+        android:title="Pedidos"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mMinhaConta"
+        android:icon="@drawable/outline_account_circle"
+        android:title="Minha conta"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mRecorrente"
+        android:icon="@drawable/outline_receipt"
+        android:title="Recorrente"
+        app:showAsAction="ifRoom" />
+
+</menu>

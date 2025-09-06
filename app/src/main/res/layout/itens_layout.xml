@@ -24,6 +24,7 @@
         android:id="@+id/idTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/idAppBar"
         app:tabMode="scrollable">
 
         <com.google.android.material.tabs.TabItem
@@ -72,10 +73,18 @@
             android:id="@+id/idTabItemCarnesOvos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/outline_local_drink"
+            android:icon="@drawable/outline_egg"
             android:text="Carnes e Ovos" />
 
 
     </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/idBottonNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_compra_unica" />
 
 </RelativeLayout>
