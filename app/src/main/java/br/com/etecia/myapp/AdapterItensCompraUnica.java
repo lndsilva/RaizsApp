@@ -17,13 +17,25 @@ public class AdapterItensCompraUnica extends FragmentStateAdapter {
         switch (position) {
             case 0:
                 return new PromocoesFragment();
+            case 1:
+                return new NovidadesFragment();
+            case 2:
+                return new OriginaisFragment();
+            case 3:
+                return new NossaHortaFragment();
+            case 4:
+                return new MerceariaFragment();
+            case 5:
+                return new BebidasFragment();
+            case 6:
+                return new CarnesOvosFragment();
         }
         return null;
     }
 
     @Override
     public int getItemCount() {
-        return 1;
+        return 7;
     }
 }
 
