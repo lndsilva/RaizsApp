@@ -1,6 +1,8 @@
 package br.com.etecia.myapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +34,18 @@ public class ItensActivity extends AppCompatActivity {
         idMaterialToolBar = findViewById(R.id.idMaterialToolBar);
         idViewPagerItens = findViewById(R.id.idViewPagerItens);
         idTabItemPromo = findViewById(R.id.idTabItemPromo);
+
+        idMaterialToolBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),SplashActivity.class));
+            }
+        });
+
+        AdapterItensCompraUnica adapterItensCompraUnica = new AdapterItensCompraUnica(this);
+        idViewPagerItens.setAdapter(adapterItensCompraUnica);
+
+
 
 
     }
