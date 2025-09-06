@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ItensActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/idAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/idTooBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/outline_arrow_back"
+            app:title="Compra Única" />
+    </com.google.android.material.appbar.AppBarLayout>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/idTabLayout"
         android:layout_width="match_parent"
