@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 public class AdapterItensCompraUnica extends FragmentStateAdapter {
+
     public AdapterItensCompraUnica(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
     }
@@ -13,10 +14,11 @@ public class AdapterItensCompraUnica extends FragmentStateAdapter {
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        switch (position){
-            case 0: return new PromocoesFragment();
-
+        switch (position) {
+            case 0:
+                return new PromocoesFragment();
         }
+        return null;
     }
 
     @Override
@@ -24,3 +26,4 @@ public class AdapterItensCompraUnica extends FragmentStateAdapter {
         return 1;
     }
 }
+

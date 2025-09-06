@@ -16,7 +16,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class ItensActivity extends AppCompatActivity {
     ViewPager2 idViewPagerItens;
-    TabLayout idTabItemPromo;
+    TabLayout idTabLayout;
 
     MaterialToolbar idMaterialToolBar;
 
@@ -33,7 +33,7 @@ public class ItensActivity extends AppCompatActivity {
 
         idMaterialToolBar = findViewById(R.id.idMaterialToolBar);
         idViewPagerItens = findViewById(R.id.idViewPagerItens);
-        idTabItemPromo = findViewById(R.id.idTabItemPromo);
+        idTabLayout = findViewById(R.id.idTabLayout);
 
         idMaterialToolBar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +45,28 @@ public class ItensActivity extends AppCompatActivity {
         AdapterItensCompraUnica adapterItensCompraUnica = new AdapterItensCompraUnica(this);
         idViewPagerItens.setAdapter(adapterItensCompraUnica);
 
+        idTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                idViewPagerItens.setCurrentItem(tab.getPosition());
+            }
 
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
 
+            }
 
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+        idViewPagerItens.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                idTabLayout.getTabAt(position).select();
+            }
+        });
     }
 }
